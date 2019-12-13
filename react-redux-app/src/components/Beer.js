@@ -12,14 +12,15 @@ const Beer = props => {
             {props.isFetching && (
                 <Loader type="Puff" color="#00BFFF" height={100} width={100} />
             )}
-            <div>
+            <div className="container">
                 {props.beer.map(beer => (
                     <div key={beer.id}>
                         <p>Beer name: {beer.name}</p>
+                        <img src={beer.image_url} alt="beer-bottle" />
                         <p>tagline: {beer.tagline}</p>
                         <p> First brewed:{beer.first_brewed}</p>
                         <p>Description: {beer.description}</p>
-                        <img src={beer.image_url} alt="beer-bottle" />
+
 
                     </div>
                 ))}
